@@ -1,2 +1,2 @@
-// a script that writes database my_db:
-use my_db
+// a script that lists all databases
+show dbs
