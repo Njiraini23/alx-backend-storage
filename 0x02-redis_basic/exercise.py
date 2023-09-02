@@ -2,6 +2,9 @@
 """Creates a class to store instances of the Redis
 client as a private variable
 """
-class Redis(object):
-    def __init__(self, host='localhost', port=6379,
-            db=0, password=None, socket_timeout=None)
+class Cache:
+    """a redis class called cache"""
+    def __init__(self):
+        """will store instances and flush"""
+        self._redis = redis.Redis()
+        self._redis.flushdb()
