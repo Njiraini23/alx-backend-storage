@@ -7,6 +7,7 @@ import redis
 import uuid
 from typing import Union
 
+
 class Cache:
     """a redis class called cache"""
     def __init__(self):
@@ -33,7 +34,7 @@ class Cache:
             return data
         return fn(data)
 
-    def get_str(self, key:str) -> Union[str, None]:
+    def get_str(self, key: str) -> Union[str, None]:
         """methods that automatically paratrize Cache.get"""
         data = self._redis.get(key)
         return data.decode('utf-8')
@@ -41,4 +42,3 @@ class Cache:
     def get_int(self, key: str) -> Union[int, None]:
         """metho with Cache.get with the right conversion function"""
         return self.get(key, fn=int)
-
