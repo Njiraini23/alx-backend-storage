@@ -1,4 +1,4 @@
-0x01. NoSQL
+This is a project on  NoSQL that uses MongoDb
 Back-end NoSQL MongoDB
 Resources
 Read or watch:
